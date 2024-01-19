@@ -1,10 +1,10 @@
-import express from 'express';
+import express from "express";
 
 const router = express.Router();
 
 // Define your routes here
-router.get('/', (req, res) => {
-  res.send('Hello, world!');
+router.get("/", (req, res) => {
+  res.send("Hello, world!");
 });
 
 export default router;

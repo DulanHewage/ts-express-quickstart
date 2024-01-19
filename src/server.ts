@@ -1,11 +1,11 @@
-import express from 'express';
-import morgan from 'morgan';
-import { Request, Response, NextFunction } from 'express';
+import express from "express";
+import morgan from "morgan";
+import { Request, Response, NextFunction } from "express";
 import routes from "./routes/index.js";
 const app = express();
 
 const morganMiddleware = morgan(
-  ':method :url :status :res[content-length] - :response-time ms',
+  ":method :url :status :res[content-length] - :response-time ms",
   {
     stream: {
       write: (message) => console.log(message.trim()),
@@ -22,22 +22,24 @@ interface CustomError extends Error {
 }
 
 // Error handling middleware
-app.use((err: CustomError, _req: Request, res: Response, next: NextFunction) => {
-  const status = err.status || 500;
-  const message = err.message || "Internal Server Error";
-  // You can also log the error to a file or console
-  console.error(err);
+app.use(
+  (err: CustomError, _req: Request, res: Response, next: NextFunction) => {
+    const status = err.status || 500;
+    const message = err.message || "Internal Server Error";
+    // You can also log the error to a file or console
+    console.error(err);
 
-  res.status(status).json({
-    error: {
-      message,
-      status
-    }
-  });
-  next();
-});
+    res.status(status).json({
+      error: {
+        message,
+        status,
+      },
+    });
+    next();
+  }
+);
 
 const port = process.env.PORT || 3000;
-const server = app.listen(port, async () => {
+app.listen(port, async () => {
   console.log(`server started on port: ${port}`);
 });
