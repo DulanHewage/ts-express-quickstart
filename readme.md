@@ -9,6 +9,8 @@ This project is a starter template for building a REST API using Express and Typ
 - Error handling and logging
 - Environment variables configuration
 - Nodemon for automatic server restarts during development
+- ESLint for enforcing coding style and finding problems
+- Prettier for code formatting
 - Database integration (optional)
 
 ## Getting Started
