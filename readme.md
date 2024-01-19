@@ -1,4 +1,4 @@
-# Express REST API Starter Template
+# TypeScript Express REST API Starter Template
 
 This project is a starter template for building a REST API using Express and TypeScript. It provides a basic structure and configuration to help you get started quickly.
 
