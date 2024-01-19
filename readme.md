@@ -8,6 +8,7 @@ This project is a starter template for building a REST API using Express and Typ
 - Routing and middleware configuration
 - Error handling and logging
 - Environment variables configuration
+- Nodemon for automatic server restarts during development
 - Database integration (optional)
 
 ## Getting Started
@@ -26,7 +27,6 @@ You can now access the API at `http://localhost:3000`.
 The project structure is organized as follows:
 
 - `src`: Contains the source code of the API.
-  - `controllers`: Contains the route handlers for different API endpoints.
   - `middlewares`: Contains custom middleware functions.
   - `models`: Contains the database models (if applicable).
   - `routes`: Contains the API routes.
@@ -35,10 +35,6 @@ The project structure is organized as follows:
 - `logs`: Contains log files.
 
 Feel free to modify the project structure according to your needs.
-
-## Contributing
-
-If you would like to contribute to this project, please follow the guidelines in the [CONTRIBUTING.md](./CONTRIBUTING.md) file.
 
 ## License
 
