@@ -15,7 +15,7 @@ This project is a starter template for building a REST API using Express and Typ
 
 To use this starter template, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/dulanhewage/express-rest-api-starter.git`
+1. Clone the repository: `git clone https://github.com/DulanHewage/ts-express-quickstart.git`
 2. Install dependencies: `npm install`
 3. Rename the `.env.example` file to `.env` and update the configuration values as needed.
 4. Start the server: `npm start`
